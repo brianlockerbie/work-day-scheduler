@@ -9,9 +9,10 @@ textarea{
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
+  outline: none;
+  padding-top: 15px;
   width: 100%;
+  margin: 0;
 }
 
 .jumbotron {
@@ -65,10 +66,26 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
-  height: 60px;
+  height: 80px;
 }
 
 .saveBtn:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+
+.textBox {
+  height: 80px;
+}
+
+.past-item {
+  background-color: white ;
+}
+
+.current-item {
+  background-color: teal;
+}
+
+.future-item {
+  background-color: #77dd77;
 }
