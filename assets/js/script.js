@@ -3,7 +3,7 @@ var savedItems = {};
 var today = moment().format("dddd, MMMM Do");
 
 var currentTime = parseInt(moment().format('H'))
-console.log(currentTime);
+
 
 $("#currentDay")
     .text(today);
@@ -14,7 +14,7 @@ var createItem = function () {
         .text()
         .trim()
 
-    var textInput = $("<textarea")
+    var textInput = $("<textarea>")
         .addClass("m-0")
         .val(text)
 
@@ -88,7 +88,7 @@ var loadItems = function () {
     })
 }
 
-$(".saveBtn").on("click", saveItem);
+$(".saveBtn").on("click", saveButton);
 
 loadItems();
 
