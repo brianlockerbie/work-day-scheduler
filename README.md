@@ -1,4 +1,4 @@
-## <h1 align="center">Work Day Scheduler App</h1>
+## <h1 align="center">Work Day Scheduler</h1>
 
 ## Description
 The Work Day Scheduler application uses third-party API and JavaScript to create an hourly calendar-style scheduler. Users can choose a time slot and enter a task. Users can click the blue save button to the right of the task to save. The saved tasks are stored in local storage so they are still accessible even when the application is refreshed. The current date is displayed on the top of the application and the times are color coded. The current hour is depicted with the red background color, the upcoming hours are depicted in green, and the previous hours are grey. The application will auto-clear tasks at the start of every new day.
