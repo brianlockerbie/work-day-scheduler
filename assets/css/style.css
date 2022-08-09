@@ -79,11 +79,11 @@ textarea{
 }
 
 .current-item {
-  background-color: teal;
+  background-color: red;
 }
 
 .past-item {
-  background-color: red;
+  background-color: grey;
 }
 
 .future-item {
