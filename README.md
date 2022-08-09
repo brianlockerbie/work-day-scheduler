@@ -39,7 +39,7 @@ THEN the saved events persist
 
 No installation required.
 ## Usage
-Live link [here](https://brianlockerbie.github.io/scheduler-app/)
+Live link [here](https://brianlockerbie.github.io/work-day-scheduler/)
 
 ## Screenshot
 <img src="./assets/images/work-day-screenshot.png">
