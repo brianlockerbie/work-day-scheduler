@@ -1,7 +1,7 @@
 var displayTime = document.querySelector("#currentDay");
 var currentTime = moment();
 
-displayTime.textConent = currentTime.format("dddd, MMMM Do");
+displayTime.textContent = currentTime.format("dddd, MMMM Do")
 
 $(".saveBtn").on("click", function() {
     var value = $(this).siblings(".description").val();
