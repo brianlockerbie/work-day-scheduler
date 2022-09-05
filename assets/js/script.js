@@ -1,119 +1,134 @@
-var savedItems = {};
+var displayTime = document.querySelector("#currentDay");
+var currentTime = moment();
 
-var today = moment().format("dddd, MMMM Do");
+displayTime.textConent = currentTime.format("dddd, MMMM Do");
+
+$(".saveBtn").on("click", function() {
+    var value = $(this).siblings(".description").val();
+    var time = $(this).parent().attr("id");
+    // save in localStorage
+    localStorage.setItem(time /* aka KEY = row id */, value /* text in the textarea */);
+});
 
 var currentTime = parseInt(moment().format('H'))
 
+// 9AM
+$("#9am-row .description").val(localStorage.getItem("9am-row" /* localStorage KEY also the row id */));
 
-$("#currentDay")
-    .text(today);
+// 10am
+$("#10am-row .description").val(localStorage.getItem("#10am-row"));
 
-
-var createItem = function () {
-    var text = $(this)
-        .text()
-        .trim()
-
-    var textInput = $("<textarea>")
-        .addClass("m-0")
-        .val(text)
-
-    $(this).replaceWith(textInput);
-    textInput.trigger("focus");
-}
-
-
-$(".textBox").on("click", "p", createItem)
-
-var confirmItem = function(text, id){
-    var text = $(this)
-        .val()
-        .trim()
-
-    var id = $(this)
-        .closest(".row")
-        .attr("id")
-
-    var pReturn = $("<p>")
-        .attr("data-time", id)
-        .addClass("my-auto h-75 w-100 pt-3")
-        .text(text);
-
-    $(this).replaceWith(pReturn);
-
-}
-
-$(".textBox").on("blur", "textarea", confirmItem)
-
-var saveButton = function(event) {
-
-    console.log(savedItems);
-
-    var selectedParent =$(event.target)
-        .closest(".row")
-
-    var selectedTime = selectedParent
-        .attr("id")
-
-    var selectedText = selectedParent
-        .children(".textBox")
-        .children("p")
-        .text()
+// 11am
+$("#11am-row .description").val(localStorage.getItem("11am-row"));
     
-    savedItems[selectedTime] = selectedText
-    console.log(savedItems)
-
-    saveItem(savedItems);
-
-}
-
-var saveItem = function () {
-    localStorage.setItem("items", JSON.stringify(savedItems))
-}
-
-var loadItems = function () {
-    savedItems = JSON.parse(localStorage.getItem("items"))
-
-    if(!savedItems) {
-        savedItems = {};
-    }
+// 12pm
+$("#12pm-row .description").val(localStorage.getItem("12pm-row"));
     
-    $.each(savedItems, function(list, arr) {
+// 1pm
+$("#1pm-row .description").val(localStorage.getItem("1pm-row"));
+    
+// 2pm
+$("#2pm-row .description").val(localStorage.getItem("2pm-row"));
+    
+// 3pm
+$("#3pm-row .description").val(localStorage.getItem("3pm-row"));
+    
+// 4pm
+$("#4pm-row .description").val(localStorage.getItem("4pm-row"));
+    
+// 5pm
+$("#5pm-row .description").val(localStorage.getItem("5pm-row"));
+    
 
-        var test = $("#" + list)
-            .find(".textBox")
-            .children("p")
-            .text(arr);
+var hour9 = 9;
+var hour10 = 10;
+var hour11 = 11;
+var hour12 = 12;
+var hour1 = 13;
+var hour2 = 14;
+var hour3 = 15;
+var hour4 = 16;
+var hour5 = 17;
 
-    })
+var currentHour = moment().format('H');
+    
+// 9am 
+if (currentHour < hour9) {
+    $("#9am-text").addClass("future");
+} else if (currentHour > hour9) {
+    $("#9am-text").addClass("past");
+} else if (currentHour = hour9) {
+    $("#9am-text").addClass("present");
+}
+    
+// 10am 
+if (currentHour < hour10) {
+    $("#10am-text").addClass("future");
+} else if (currentHour > hour10) {
+    $("#10am-text").addClass("past");
+} else if (currentHour = hour10) {
+    $("#10am-text").addClass("present");
 }
 
-$(".saveBtn").on("click", saveButton);
-
-loadItems();
-
-var timeItems = function () {
-    var selection = $(".row").each(function() {
-        
-        var theTime = parseInt($(this)
-            .attr("id"))
-
-        if(currentTime > theTime) {       
-            check = $(this)
-                .find(".textBox")
-                .addClass("past-item")
-        } else if (currentTime < theTime) {
-            check = $(this)
-                .find(".textBox")
-                .addClass("future-item")
-        } else if (currentTime === theTime) {
-            check = $(this)
-            .find(".textBox")
-            .addClass("current-item")
-        }
-    })
+// 11am
+if (currentHour < hour11) {
+    $("#11am-text").addClass("future");
+} else if (currentHour > hour11) {
+    $("#11am-text").addClass("past");
+} else if (currentHour = hour11) {
+    $("#11am-text").addClass("present");
 }
 
-timeItems();
+// 12pm
+if (currentHour < hour12) {
+    $("#12pm-text").addClass("future");
+} else if (currentHour > hour12) {
+    $("#12pm-text").addClass("past");
+} else if (currentHour = hour12) {
+    $("#12pm-text").addClass("present");
+}
 
-setInterval(timeItems, (60*1000)*30)
+// 1pm
+if (currentHour < hour1) {
+    $("#1pm-text").addClass("future");
+} else if (currentHour > hour1) {
+    $("#1pm-text").addClass("past");
+} else if (currentHour = hour1) {
+    $("#1pm-text").addClass("present");
+}
+
+// 2pm
+if (currentHour < hour2) {
+    $("#2pm-text").addClass("future");
+} else if (currentHour > hour2) {
+    $("#2pm-text").addClass("past");
+} else if (currentHour = hour2) {
+    $("#2pm-text").addClass("present");
+}
+
+// 3pm
+if (currentHour < hour3) {
+    $("#3pm-text").addClass("future");
+} else if (currentHour > hour3) {
+    $("#3pm-text").addClass("past");
+} else if (currentHour = hour3) {
+    $("#3pm-text").addClass("present");
+}
+
+// 4pm
+if (currentHour < hour4) {
+    $("#4pm-text").addClass("future");
+} else if (currentHour > hour4) {
+    $("#4pm-text").addClass("past");
+} else if (currentHour = hour4) {
+    $("#4pm-text").addClass("present");
+}
+
+// 5pm
+if (currentHour < hour5) {
+    $("#5pm-text").addClass("future");
+} else if (currentHour > hour5) {
+    $("#5pm-text").addClass("past");
+} else if (currentHour = hour5) {
+    $("#5pm-text").addClass("present");
+}
