@@ -23,12 +23,12 @@
   <body>
     <div class="container planner-container">
     <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
+      <h1 class="display-4">Work Day Scheduler</h1><br>
       <!-- <p class="lead">A simple calendar app for scheduling your work day</p> -->
-      <p id="currentDay" class="lead"></p>
+      <p id="currentDay" class="lead text-center"></p>
     </header>
     <!-- Time Slots-->
-    <div class="container text-white mb-5">
+    <!-- <div class="container text-white mb-5">
       <div class="row mb-1" id="9">
         <div class="d-flex justify-content-center align-items-center col-12 col-lg-2 bg-secondary time-block">
           <h2 class="py-0 my-0">9AM</h2>
@@ -38,10 +38,19 @@
         </div>
         <button class="col-3 col-lg-1 btn btn-secondary saveBtn d-flex justify-content-center align-items-center">
           <i class="fa-solid fa-floppy-disk"></i>
-        </button>
+        </button> -->
+        <div class="row text-white" id="9am-row">
+          <div class="d-flex align-items-center col-1 col-xs-2" id="time-block 9am-hour">
+              <h5 class="py-0 my-0">9AM</h5>
+          </div>
+          <textarea id="9am-text" rows="3" class="form-control description col-7 col-xs-1"></textarea>
+          <button type="button" class="saveBtn col-1 col-xs-1 btn"><span class="oi oi-task"></span>
+            <i class="fa-solid fa-floppy-disk"></i>
+          </button>
+          <!-- <button type="button" class="saveBtn col-1 col-xs-1"><span class="oi oi-task"></span></button> -->
       </div>
       <!-- 10AM Time Slot -->
-      <div class="row mb-1" id="10">
+      <!-- <div class="row mb-1" id="10">
         <div class="d-flex justify-content-center align-items-center col-12 col-lg-2 bg-secondary time-block">
           <h2 class="py-0 my-0">10AM</h2>
         </div>
@@ -50,10 +59,18 @@
         </div>
         <button class="col-3 col-lg-1 btn btn-secondary saveBtn d-flex justify-content-center align-items-center">
           <i class="fa-solid fa-floppy-disk"></i>
-        </button>
+        </button> -->
+        <div class="row text-white mb-5" id="10am-row">
+          <div class="d-flex justify-content-center align-items-center col-12 col-lg-2 bg-secondary time-block" id="10am-hour">
+              <h4 class="py-0 my-0">10AM</h4>
+          </div>
+          <textarea id="10am-text" rows="3" class="form-control description col-7 col-xs-1"></textarea>
+          <button class="col-3 col-lg-1 btn btn-secondary saveBtn d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-floppy-disk"></i>
+          </button>
       </div>
       <!-- 11AM Time Slot -->
-      <div class="row mb-1" id="11">
+      <!-- <div class="row mb-1" id="11">
         <div class="d-flex justify-content-center align-items-center col-12 col-lg-2 bg-secondary time-block">
           <h2 class="py-0 my-0">11AM</h2>
         </div>
@@ -62,10 +79,18 @@
         </div>
         <button class="col-3 col-lg-1 btn btn-secondary saveBtn d-flex justify-content-center align-items-center">
           <i class="fa-solid fa-floppy-disk"></i>
-        </button>
+        </button> -->
+        <div class="row text-white mb-5" id="11am-row">
+          <div class="d-flex justify-content-center align-items-center col-12 col-lg-2 bg-secondary time-block" id="11am-hour">
+              <h4 class="py-0 my-0">11AM</h4>
+          </div>
+          <textarea id="11am-text" rows="3" class="form-control description col-7 col-xs-1"></textarea>
+          <button class="col-3 col-lg-1 btn btn-secondary saveBtn d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-floppy-disk"></i>
+          </button>
       </div>
       <!-- 12PM Time Slot -->
-      <div class="row mb-1" id="12">
+      <!-- <div class="row mb-1" id="12">
         <div class="d-flex justify-content-center align-items-center col-12 col-lg-2 bg-secondary time-block">
           <h2 class="py-0 my-0">12PM</h2>
         </div>
@@ -74,10 +99,18 @@
         </div>
         <button class="col-3 col-lg-1 btn btn-secondary saveBtn d-flex justify-content-center align-items-center">
           <i class="fa-solid fa-floppy-disk"></i>
-        </button>
+        </button> -->
+        <div class="row text-white mb-5" id="12pm-row">
+          <div class="d-flex justify-content-center align-items-center col-12 col-lg-2 bg-secondary time-block" id="12pm-hour">
+              <h4 class="py-0 my-0">12PM</h4>
+          </div>
+          <textarea id="12pm-text" rows="3" class="form-control description col-7 col-xs-1"></textarea>
+          <button class="col-3 col-lg-1 btn btn-secondary saveBtn d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-floppy-disk"></i>
+          </button>
       </div>
       <!-- 1PM Time Slot -->
-      <div class="row mb-1" id="13">
+      <!-- <div class="row mb-1" id="13">
         <div class="d-flex justify-content-center align-items-center col-12 col-lg-2 bg-secondary time-block">
           <h2 class="py-0 my-0">1PM</h2>
         </div>
@@ -86,10 +119,18 @@
         </div>
         <button class="col-3 col-lg-1 btn btn-secondary saveBtn d-flex justify-content-center align-items-center">
           <i class="fa-solid fa-floppy-disk"></i>
-        </button>
+        </button> -->
+        <div class="row text-white mb-5" id="1pm-row">
+          <div class="d-flex justify-content-center align-items-center col-12 col-lg-2 bg-secondary time-block" id="1pm-hour">
+              <h4 class="py-0 my-0">1PM</h4>
+          </div>
+          <textarea id="1pm-text" rows="3" class="form-control description col-7 col-xs-1"></textarea>
+          <button class="col-3 col-lg-1 btn btn-secondary saveBtn d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-floppy-disk"></i>
+          </button>
       </div>
       <!-- 2PM Time Slot -->
-      <div class="row mb-1" id="14">
+      <!-- <div class="row mb-1" id="14">
         <div class="d-flex justify-content-center align-items-center col-12 col-lg-2 bg-secondary time-block">
           <h2 class="py-0 my-0">2PM</h2>
         </div>
@@ -98,10 +139,18 @@
         </div>
         <button class="col-3 col-lg-1 btn btn-secondary saveBtn d-flex justify-content-center align-items-center">
           <i class="fa-solid fa-floppy-disk"></i>
-        </button>
+        </button> -->
+        <div class="row text-white mb-5" id="2pm-row">
+          <div class="d-flex justify-content-center align-items-center col-12 col-lg-2 bg-secondary time-block" id="2pm-hour">
+              <h4 class="py-0 my-0">2PM</h4>
+          </div>
+          <textarea id="2pm-text" rows="3" class="form-control description col-7 col-xs-1"></textarea>
+          <button class="col-3 col-lg-1 btn btn-secondary saveBtn d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-floppy-disk"></i>
+          </button>
       </div>
       <!-- 3PM Time Slot -->
-      <div class="row mb-1" id="15">
+      <!-- <div class="row mb-1" id="15">
         <div class="d-flex justify-content-center align-items-center col-12 col-lg-2 bg-secondary time-block">
           <h2 class="py-0 my-0">3PM</h2>
         </div>
@@ -110,10 +159,18 @@
         </div>
         <button class="col-3 col-lg-1 btn btn-secondary saveBtn d-flex justify-content-center align-items-center">
           <i class="fa-solid fa-floppy-disk"></i>
-        </button>
+        </button> -->
+        <div class="row text-white mb-5" id="3pm-row">
+          <div class="d-flex justify-content-center align-items-center col-12 col-lg-2 bg-secondary time-block" id="3pm-hour">
+              <h4 class="py-0 my-0">3PM</h4>
+          </div>
+          <textarea id="3pm-text" rows="3" class="form-control description col-7 col-xs-1"></textarea>
+          <button class="col-3 col-lg-1 btn btn-secondary saveBtn d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-floppy-disk"></i>
+          </button>
       </div>
       <!-- 4PM Time Slot -->
-      <div class="row mb-1" id="16">
+      <!-- <div class="row mb-1" id="16">
         <div class="d-flex justify-content-center align-items-center col-12 col-lg-2 bg-secondary time-block">
           <h2 class="py-0 my-0">4PM</h2>
         </div>
@@ -122,10 +179,18 @@
         </div>
         <button class="col-3 col-lg-1 btn btn-secondary saveBtn d-flex justify-content-center align-items-center">
           <i class="fa-solid fa-floppy-disk"></i>
-        </button>
+        </button> -->
+        <div class="row text-white mb-5" id="4pm-row">
+          <div class="d-flex justify-content-center align-items-center col-12 col-lg-2 bg-secondary time-block" id="4pm-hour">
+              <h4 class="py-0 my-0">4PM</h4>
+          </div>
+          <textarea id="4pm-text" rows="3" class="form-control description col-7 col-xs-1"></textarea>
+          <button class="col-3 col-lg-1 btn btn-secondary saveBtn d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-floppy-disk"></i>
+          </button>
       </div>
       <!-- 5PM Time Slot -->
-      <div class="row mb-1" id="17">
+      <!-- <div class="row mb-1" id="17">
         <div class="d-flex justify-content-center align-items-center col-12 col-lg-2 bg-secondary time-block">
           <h2 class="py-0 my-0">5PM</h2>
         </div>
@@ -134,7 +199,15 @@
         </div>
         <button class="col-3 col-lg-1 btn btn-secondary saveBtn d-flex justify-content-center align-items-center">
           <i class="fa-solid fa-floppy-disk"></i>
-        </button>
+        </button> -->
+        <div class="row text-white mb-5" id="5pm-row">
+          <div class="d-flex justify-content-center align-items-center col-12 col-lg-2 bg-secondary time-block" id="5pm-hour">
+              <h4 class="py-0 my-0">5PM</h4>
+          </div>
+          <textarea id="5pm-text" rows="3" class="form-control description col-7 col-xs-1"></textarea>
+          <button class="col-3 col-lg-1 btn btn-secondary saveBtn d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-floppy-disk"></i>
+          </button>
       </div>
     </div>
 

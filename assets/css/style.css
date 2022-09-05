@@ -23,15 +23,15 @@ textarea{
   text-align: center;
   background-color: transparent;
   color: white;
-  border-radius: 0;
-  border-bottom: 10px solid black;
-  margin: 10px;
-  padding: auto 20px;
+  /* border-radius: 0;
+  border-bottom: 10px solid black; */
+  margin: -70px; 
+  padding: auto -10px;
 }
 
-.description{
+/* .description{
   white-space: pre-wrap;
-}
+} */
 
 .time-block{
   text-align: center;
@@ -39,15 +39,18 @@ textarea{
 }
 
 .row {
-  border: 1px solid white;
-  border-radius: 15px;
-  flex: 1 80px;
+  /* border: 1px solid white; */
+  /* border-radius: 15px;
+  flex: 1 80px; */
+  height: 80px;
+  justify-content: center;
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  background-color: #000000;
+  color: #ffffff;
+  justify-self: left;
+  /* border-top: 1px dashed #000000; */
 }
 
 .past {
@@ -66,22 +69,23 @@ textarea{
 }
 
 .saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  /* border-left: 1px solid black; */
+  /* border-top-right-radius: 15px; */
+  /* border-bottom-right-radius: 15px; */
   background-color: #06AED5;
   color: white;
-  height: 80px;
+  border: none;
+  /* height: 80px; */
 }
 
-.saveBtn:hover {
+.saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
 
 h1, #currentDay {
   font-family: 'Homemade Apple', cursive;
-  margin-top: 70px;
+  margin-top: 20px;
 }
 
 h1 {
@@ -104,9 +108,9 @@ h1 {
     margin: 0px 0px;
   }
 
-.textBox {
+/* .textBox {
   height: 80px;
-}
+} */
 
 .current-item {
   background-color: red;
@@ -120,8 +124,23 @@ h1 {
   background-color: #77dd77;
 }
 
-.lead {
+/* .lead {
   margin-top: 20px;
+} */
+
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: white;
+  margin: 5px;
+}
+
+body{
+  font-size: 12px;
+}
+
+* {
+  box-sizing: content-box;
 }
 
 }
