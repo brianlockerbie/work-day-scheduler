@@ -3,34 +3,35 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  /* line-height: 1; */
+  line-height: 1;
   background: rgb(238,174,202);
   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
 textarea{
   background: transparent;
-  border: 1px solid black;
+  border: none;
+  outline: none;
   resize: none;
-  color: black;
-  /* padding-top: 20px; */
-  /* width: 100%;
-  margin: 0; */
+  color: white;
+  margin: 0;
+  padding-top: 20px;
+  width: 100%;
 }
 
 .jumbotron {
   text-align: center;
   background-color: transparent;
   color: white;
-  /* border-radius: 0;
-  border-bottom: 10px solid black; */
-  margin: -70px; 
-  padding: auto -10px;
+  border-radius: 0;
+  border-bottom: 10px solid black;
+  /* margin: -70px; 
+  padding: auto -10px; */
 }
 
-/* .description{
+.description{
   white-space: pre-wrap;
-} */
+}
 
 .time-block{
   text-align: center;
@@ -38,18 +39,18 @@ textarea{
 }
 
 .row {
-  /* border: 1px solid white; */
-  /* border-radius: 15px;
-  flex: 1 80px; */
-  height: 80px;
-  justify-content: center;
+  border: 1px solid white;
+  border-radius: 15px;
+  flex: 1 80px;
+  /* height: 80px; */
+  /* justify-content: center; */
 }
 
 .hour {
-  background-color: #000000;
-  color: #ffffff;
-  justify-self: left;
-  /* border-top: 1px dashed #000000; */
+  background-color: #ffffff;
+  color: #000000;
+  /* justify-self: left; */
+  border-top: 1px dashed #000000;
 }
 
 .past {
@@ -58,7 +59,7 @@ textarea{
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #8aecff;
   color: white;
 }
 
@@ -68,21 +69,21 @@ textarea{
 }
 
 .saveBtn {
-  /* border-left: 1px solid black; */
-  /* border-top-right-radius: 15px; */
-  /* border-bottom-right-radius: 15px; */
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
-  border: none;
-  /* height: 80px; */
+  /* border: none; */
+  height: 80px;
 }
 
-.saveBtn i:hover {
+.saveBtn:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
 
-h1, #currentDay {
+/* h1, #currentDay {
   font-family: 'Homemade Apple', cursive;
   margin-top: 20px;
 }
@@ -90,29 +91,23 @@ h1, #currentDay {
 h1 {
   font-size: 3rem;
   padding: 10px;
-}
+} */
 
-.planner-container {
+/* .planner-container {
   background-color: black;
   border-radius: 10px;
   padding: 10px 10px;
   margin: 20px auto;
   opacity: 95%;
   justify-content: center;
-}
-
-@media only screen and (max-width: 500px) {
-  .planner-container {
-    padding: auto -50px;
-    margin: 0px 0px;
-  }
-
-/* .textBox {
-  height: 80px;
 } */
 
+.textBox {
+  height: 80px;
+}
+
 .current-item {
-  background-color: red;
+  background-color: #8aecff;
 }
 
 .past-item {
@@ -123,11 +118,11 @@ h1 {
   background-color: #77dd77;
 }
 
-/* .lead {
+.lead {
   margin-top: 20px;
-} */
+}
 
-.jumbotron {
+/* .jumbotron {
   text-align: center;
   background-color: transparent;
   color: white;
@@ -140,6 +135,11 @@ body{
 
 * {
   box-sizing: content-box;
-}
+} */
 
-}
+/* @media only screen and (max-width: 500px) {
+  .planner-container {
+    padding: auto -50px;
+    margin: 0px 0px;
+  }
+} */
