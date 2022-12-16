@@ -11,8 +11,6 @@ body {
 textarea{
   background: transparent;
   border: 1px solid black;
-  /* border: none;
-  outline: none; */
   resize: none;
   color: black;
   /* padding-top: 20px; */
