@@ -36,7 +36,7 @@ var confirmItem = function(text, id) {
         .attr("id")
 
     var pReturn = $("<p>")
-        attr("data-time", id)
+        .attr("data-time", id)
         .addClass("my-auto h-75 w-100 pt-3")
         .text(text);
 
