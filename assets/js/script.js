@@ -42,3 +42,79 @@ var confirmItem = function(text, id) {
 
     $(this).replaceWith(pReturn);
 }
+
+$(".textBox").on("blur", "textarea", confirmItem)
+
+var saveButton = function(event) {
+    console.log(savedItems);
+
+    var selectedParent = $(event.target)
+        .closest(".row")
+
+        var selectedTime = selectedParent
+        .attr("id")
+
+    var selectedText = selectedParent
+        .children(".textBox")
+        .children("p")
+        .text()
+    
+    savedItems[selectedTime] = selectedText
+    console.log(savedItems)
+
+    saveItem(savedItems);
+
+}
+
+
+var saveItem = function () {
+    localStorage.setItem("items", JSON.stringify(savedItems))
+}
+
+var loadItems = function () {
+    savedItems = JSON.parse(localStorage.getItem("items"))
+
+    if(!savedItems) {
+        savedItems = {};
+    }
+    
+    $.each(savedItems, function(list, arr) {
+
+        var test = $("#" + list)
+            .find(".textBox")
+            .children("p")
+            .text(arr);
+
+    })
+}
+
+$(".saveBtn").on("click", saveButton);
+
+loadItems();
+
+var timeItems = function () {
+    var selection = $(".row").each(function() {
+        
+        var theTime = parseInt($(this)
+            .attr("id"))
+
+        if(currentTime > theTime) {       
+            check = $(this)
+                .find(".textBox")
+                .addClass("past-item")
+        } else if (currentTime < theTime) {
+            check = $(this)
+                .find(".textBox")
+                .addClass("future-item")
+        } else if (currentTime === theTime) {
+            check = $(this)
+            .find(".textBox")
+            .addClass("current-item")
+        }
+    })
+}
+
+timeItems();
+
+// Check item times every 30 minutes
+setInterval(timeItems, (60*1000)*30)
