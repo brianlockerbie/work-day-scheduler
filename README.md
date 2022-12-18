@@ -42,7 +42,7 @@ No installation required.
 Live link [here](https://brianlockerbie.github.io/work-day-scheduler/)
 
 ## Screenshot
-<img src="./assets/images/work-day-screenshot1.png">
+<img src="./assets/images/work-day-screenshot2.png">
 
 ## License
 
